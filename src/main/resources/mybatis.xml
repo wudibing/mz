@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybatis主配置文件 -->
+<configuration>
+
+	<!-- 配置别名 -->
+	<!--  <typeAliases> -->
+		<!-- type 包名+类型，alias 指定别名 -->
+		<!--<typeAlias type="org.y2.cmen.crm.vo.MenuVo" alias="menuVo" /> -->
+	<!--</typeAliases> -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<plugins>
+	    <!-- com.github.pagehelper为PageHelper类所在包名 -->
+	    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+	        <!-- 设置使用的数据库方言 -->
+	        <property name="helperDialect" value="mysql"/>
+		</plugin>
+	</plugins>
+
+
+</configuration>
